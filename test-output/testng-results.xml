@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="794906" started-at="2022-01-23T23:02:24 IST" finished-at="2022-01-23T23:15:39 IST">
+    <groups>
+      <group name="Pre-Condtion">
+        <method signature="TC01_Login.aspireLogin()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="aspireLogin" class="com.aspire.testcases.TC01_Login"/>
+      </group> <!-- Pre-Condtion -->
+    </groups>
+    <test name="Test" duration-ms="794906" started-at="2022-01-23T23:02:24 IST" finished-at="2022-01-23T23:15:39 IST">
+      <class name="com.aspire.testcases.TC01_Login">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="setUp" is-config="true" duration-ms="7571" started-at="2022-01-23T23:02:16 IST" finished-at="2022-01-23T23:02:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="aspireLogin()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="aspireLogin" duration-ms="12223" started-at="2022-01-23T23:02:24 IST" finished-at="2022-01-23T23:02:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aspireLogin -->
+      </class> <!-- com.aspire.testcases.TC01_Login -->
+      <class name="com.aspire.testcases.TC04_Logout">
+        <test-method status="FAIL" signature="ProductCreate()[pri:3, instance:com.aspire.testcases.TC04_Logout@543e710e]" name="ProductCreate" duration-ms="62401" depends-on-groups="Pre-Condtion" started-at="2022-01-23T23:14:36 IST" finished-at="2022-01-23T23:15:39 IST">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[ScreenCapture path must not be null or empty]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture path must not be null or empty
+at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(MediaEntityBuilder.java:34)
+at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(MediaEntityBuilder.java:40)
+at com.aspire.testcases.TC04_Logout.ProductCreate(TC04_Logout.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductCreate -->
+      </class> <!-- com.aspire.testcases.TC04_Logout -->
+      <class name="com.aspire.testcases.TC02_InventoryProduct">
+        <test-method status="PASS" signature="ProductCreated()[pri:1, instance:com.aspire.testcases.TC02_InventoryProduct@5427c60c]" name="ProductCreated" duration-ms="400287" depends-on-groups="Pre-Condtion" started-at="2022-01-23T23:02:36 IST" finished-at="2022-01-23T23:09:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductCreated -->
+      </class> <!-- com.aspire.testcases.TC02_InventoryProduct -->
+      <class name="com.aspire.testcases.TC03_Manufacturing">
+        <test-method status="FAIL" signature="manufacturingOrderCreated()[pri:2, instance:com.aspire.testcases.TC03_Manufacturing@15bfd87]" name="manufacturingOrderCreated" duration-ms="319904" depends-on-groups="Pre-Condtion" started-at="2022-01-23T23:09:17 IST" finished-at="2022-01-23T23:14:36 IST">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[ScreenCapture path must not be null or empty]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: ScreenCapture path must not be null or empty
+at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(MediaEntityBuilder.java:34)
+at com.aventstack.extentreports.MediaEntityBuilder.createScreenCaptureFromPath(MediaEntityBuilder.java:40)
+at com.aspire.testcases.TC03_Manufacturing.manufacturingOrderCreated(TC03_Manufacturing.java:29)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manufacturingOrderCreated -->
+      </class> <!-- com.aspire.testcases.TC03_Manufacturing -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
