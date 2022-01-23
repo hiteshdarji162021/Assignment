@@ -22,7 +22,6 @@ public class TC01_Login extends Page_Login {
 			extent = new ExtentReports();
 			spark = new ExtentSparkReporter("./Report/AspireReport.html");
 			extent.attachReporter(spark);
-
 			WebPlatformHandler.loadPropertiyFileconfig("config");
 			WebPlatformHandler.createDriver(propconfig.getProperty("Browser"));
 			WebPlatformHandler.openURL(propconfig.getProperty("URL"));
@@ -50,8 +49,6 @@ public class TC01_Login extends Page_Login {
 			System.out.println("Login successfully");
 			test.pass("Login Successfully", MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build()); 
 		} catch (Exception e) {
-			
-
 			screenshot();
 			System.out.println("Login TestCase Failed");
 			test.fail("Unable to login",MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build()); 
