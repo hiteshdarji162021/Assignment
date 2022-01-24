@@ -1,1 +1,1 @@
-mvn clean install -e
+mvn clean test
