@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41752" started-at="2022-01-23T23:55:21 IST" finished-at="2022-01-23T23:56:03 IST">
+  <suite name="Suite" duration-ms="40438" started-at="2022-01-24T09:36:46 IST" finished-at="2022-01-24T09:37:27 IST">
     <groups>
       <group name="Pre-Condtion">
         <method signature="TC01_Login.aspireLogin()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="aspireLogin" class="com.aspire.testcases.TC01_Login"/>
@@ -11,31 +11,31 @@
         <method signature="TC02_InventoryProduct.ProductCreated()[pri:1, instance:com.aspire.testcases.TC02_InventoryProduct@5427c60c]" name="ProductCreated" class="com.aspire.testcases.TC02_InventoryProduct"/>
       </group> <!-- ProductCreation -->
     </groups>
-    <test name="Test" duration-ms="41752" started-at="2022-01-23T23:55:21 IST" finished-at="2022-01-23T23:56:03 IST">
+    <test name="Test" duration-ms="40438" started-at="2022-01-24T09:36:46 IST" finished-at="2022-01-24T09:37:27 IST">
       <class name="com.aspire.testcases.TC01_Login">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="setUp" is-config="true" duration-ms="8918" started-at="2022-01-23T23:55:12 IST" finished-at="2022-01-23T23:55:21 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="setUp" is-config="true" duration-ms="9420" started-at="2022-01-24T09:36:37 IST" finished-at="2022-01-24T09:36:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="aspireLogin()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="aspireLogin" duration-ms="4795" started-at="2022-01-23T23:55:21 IST" finished-at="2022-01-23T23:55:26 IST">
+        <test-method status="PASS" signature="aspireLogin()[pri:0, instance:com.aspire.testcases.TC01_Login@aecb35a]" name="aspireLogin" duration-ms="4135" started-at="2022-01-24T09:36:46 IST" finished-at="2022-01-24T09:36:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aspireLogin -->
       </class> <!-- com.aspire.testcases.TC01_Login -->
-      <class name="com.aspire.testcases.TC04_Logout">
-        <test-method status="PASS" signature="ProductCreate()[pri:3, instance:com.aspire.testcases.TC04_Logout@543e710e]" name="ProductCreate" duration-ms="3605" depends-on-groups="Pre-Condtion" started-at="2022-01-23T23:55:59 IST" finished-at="2022-01-23T23:56:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductCreate -->
-      </class> <!-- com.aspire.testcases.TC04_Logout -->
       <class name="com.aspire.testcases.TC02_InventoryProduct">
-        <test-method status="PASS" signature="ProductCreated()[pri:1, instance:com.aspire.testcases.TC02_InventoryProduct@5427c60c]" name="ProductCreated" duration-ms="14772" depends-on-groups="Pre-Condtion" started-at="2022-01-23T23:55:26 IST" finished-at="2022-01-23T23:55:41 IST">
+        <test-method status="PASS" signature="ProductCreated()[pri:1, instance:com.aspire.testcases.TC02_InventoryProduct@5427c60c]" name="ProductCreated" duration-ms="15726" depends-on-groups="Pre-Condtion" started-at="2022-01-24T09:36:51 IST" finished-at="2022-01-24T09:37:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductCreated -->
       </class> <!-- com.aspire.testcases.TC02_InventoryProduct -->
+      <class name="com.aspire.testcases.TC04_Logout">
+        <test-method status="PASS" signature="ProductCreate()[pri:3, instance:com.aspire.testcases.TC04_Logout@543e710e]" name="ProductCreate" duration-ms="3329" depends-on-groups="Pre-Condtion" started-at="2022-01-24T09:37:23 IST" finished-at="2022-01-24T09:37:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductCreate -->
+      </class> <!-- com.aspire.testcases.TC04_Logout -->
       <class name="com.aspire.testcases.TC03_Manufacturing">
-        <test-method status="PASS" signature="manufacturingOrderCreated()[pri:2, instance:com.aspire.testcases.TC03_Manufacturing@15bfd87]" name="manufacturingOrderCreated" duration-ms="18523" depends-on-groups="ProductCreation" started-at="2022-01-23T23:55:41 IST" finished-at="2022-01-23T23:55:59 IST">
+        <test-method status="PASS" signature="manufacturingOrderCreated()[pri:2, instance:com.aspire.testcases.TC03_Manufacturing@15bfd87]" name="manufacturingOrderCreated" duration-ms="17172" depends-on-groups="ProductCreation" started-at="2022-01-24T09:37:06 IST" finished-at="2022-01-24T09:37:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- manufacturingOrderCreated -->

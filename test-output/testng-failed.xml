@@ -8,6 +8,17 @@
           <include name="manufacturingOrderCreated"/>
         </methods>
       </class> <!-- com.aspire.testcases.TC03_Manufacturing -->
+      <class name="com.aspire.testcases.TC01_Login">
+        <methods>
+          <include name="setUp"/>
+          <include name="aspireLogin"/>
+        </methods>
+      </class> <!-- com.aspire.testcases.TC01_Login -->
+      <class name="com.aspire.testcases.TC02_InventoryProduct">
+        <methods>
+          <include name="ProductCreated"/>
+        </methods>
+      </class> <!-- com.aspire.testcases.TC02_InventoryProduct -->
       <class name="com.aspire.testcases.TC04_Logout">
         <methods>
           <include name="ProductCreate"/>

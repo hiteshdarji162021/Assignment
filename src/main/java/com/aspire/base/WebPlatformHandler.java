@@ -109,8 +109,12 @@ public class WebPlatformHandler {
 					driver = new FirefoxDriver();
 
 				} else {
+					
+					WebDriverManager.edgedriver().setup();
 
-					driver = new SafariDriver();
+					driver = new EdgeDriver();
+
+					
 
 				}
 
@@ -128,9 +132,7 @@ public class WebPlatformHandler {
 
 			} else {
 
-				WebDriverManager.edgedriver().setup();
-
-				driver = new EdgeDriver();
+				driver = new SafariDriver();
 
 			}
 		} catch (Exception e) {
