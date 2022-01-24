@@ -27,6 +27,9 @@ public class Page_InventoryProduct extends WebPlatformHandler {
 	private By txtbarcode = By.xpath("(//label[text()='Barcode']//ancestor :: tr//td//input)[2]");
 	private By btnSaveClose = By.xpath("//span[text()='Save & Close']");
 	private By btnSave = By.xpath("//button[contains(text(),'Save')]");
+	
+	
+	
 	public static String prodName;
 
 	public void CreateProduct() {
@@ -35,27 +38,27 @@ public class Page_InventoryProduct extends WebPlatformHandler {
 		clickOnElementIfClickable(mnuProd, "Menu", 5);
 		clickOnElementIfClickable(mnuoptProd, "Menu option", 5);
 		clickOnElementIfClickable(btncrtprod, "Create Product Button", 5);
-		prodName = propproduct.getProperty("ProductName") + timestamp();
+		prodName = prop.getProperty("ProductName") + timestamp();
 		enterTextInTextboxAfterClearingExistingText(txtProdName, prodName, "Product Name", 10);
 
-		enterTextInTextboxAfterClearingExistingText(txtSalesPrice, propproduct.getProperty("Price"), "Product Price",
+		enterTextInTextboxAfterClearingExistingText(txtSalesPrice, prop.getProperty("Price"), "Product Price",
 				10);
-		enterTextInTextboxAfterClearingExistingText(txtecost, propproduct.getProperty("Cost"), "Product Cost", 10);
-		enterTextInTextboxAfterClearingExistingText(txtunit, propproduct.getProperty("UnitofMeasure"), "Unit of Masure",
+		enterTextInTextboxAfterClearingExistingText(txtecost, prop.getProperty("Cost"), "Product Cost", 10);
+		enterTextInTextboxAfterClearingExistingText(txtunit, prop.getProperty("UnitofMeasure"), "Unit of Masure",
 				10);
 		clickOnElementIfClickable(tabInventory, "Inventory Tab", 5);
 		clickOnElementIfClickable(chklblRoutes, "Route Checkbox", 5);
-		enterTextInTextboxAfterClearingExistingText(txtWeight, propproduct.getProperty("Weight"), "Weight", 10);
-		enterTextInTextboxAfterClearingExistingText(txtVolume, propproduct.getProperty("Volume"), "Volume", 10);
-		enterTextInTextboxAfterClearingExistingText(txtManuleadTime, propproduct.getProperty("ManuleadTime"),
+		enterTextInTextboxAfterClearingExistingText(txtWeight, prop.getProperty("Weight"), "Weight", 10);
+		enterTextInTextboxAfterClearingExistingText(txtVolume, prop.getProperty("Volume"), "Volume", 10);
+		enterTextInTextboxAfterClearingExistingText(txtManuleadTime, prop.getProperty("ManuleadTime"),
 				"ManuleadTime", 10);
-		enterTextInTextboxAfterClearingExistingText(txtCustleadTime, propproduct.getProperty("CustleadTime"),
+		enterTextInTextboxAfterClearingExistingText(txtCustleadTime, prop.getProperty("CustleadTime"),
 				"CustleadTime", 10);
 		clickOnElementIfClickable(lnkaddpackage, "Create Package", 5);
-		enterTextInTextboxAfterClearingExistingText(txtPackName, propproduct.getProperty("PackageName") + timestamp(),
+		enterTextInTextboxAfterClearingExistingText(txtPackName, prop.getProperty("PackageName") + timestamp(),
 				"Package Name", 10);
-		enterTextInTextboxAfterClearingExistingText(txtqty, propproduct.getProperty("prodQty"), "Product Qty", 10);
-		enterTextInTextboxAfterClearingExistingText(txtbarcode, propproduct.getProperty("ProdBar"), "Product Barcode",
+		enterTextInTextboxAfterClearingExistingText(txtqty, prop.getProperty("prodQty"), "Product Qty", 10);
+		enterTextInTextboxAfterClearingExistingText(txtbarcode, prop.getProperty("ProdBar"), "Product Barcode",
 				10);
 		clickOnElementIfClickable(btnSaveClose, "Save and close Package Detail", 5);
 		clickOnElementIfClickable(btnSave, "Save Product", 5);
@@ -68,7 +71,7 @@ public class Page_InventoryProduct extends WebPlatformHandler {
 		waitmethod(status, "checkstatus", 10);
 		String actualStatus = driver.findElement(By.xpath("//button[@class='btn btn-primary o_form_button_edit']"))
 				.getText();
-		String expectedStatus = propproduct.getProperty("status");
+		String expectedStatus = prop.getProperty("status");
 		if (actualStatus.contains(expectedStatus)) {
 			return true;
 

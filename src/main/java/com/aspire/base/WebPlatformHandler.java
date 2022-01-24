@@ -33,24 +33,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WebPlatformHandler {
 
 	protected static WebDriver driver;
-
-	public static Properties propconfig;
-	public static Properties propproduct;
-	public static Properties propmanuf;
-
+	public static Properties prop;	
 	public static ExtentReports extent;
 	public static ExtentSparkReporter spark;
 	public static ExtentTest test;
 
 	// For load Properties
-	public static void loadPropertiyFileconfig(String fileName) throws Exception {
+	public static void loadPropertiyFile(String fileName) throws Exception {
 
 		File file = new File("./src/test/resources/com/aspire/config/" + fileName + ".properties");
 		FileInputStream fis = new FileInputStream(file);
-		propconfig = new Properties();
+		prop = new Properties();
 
 		try {
-			propconfig.load(fis);
+			prop.load(fis);
 			System.out.println("prop file loaded successfully");
 		} catch (IOException e) {
 			System.out.println("exception occured during load prop file " + e);
@@ -58,43 +54,14 @@ public class WebPlatformHandler {
 
 	}
 
-	public static void loadPropertiyFileproductDetail(String fileName) throws Exception {
-
-		File file = new File("./src/test/resources/com/aspire/config/" + fileName + ".properties");
-		FileInputStream fis = new FileInputStream(file);
-		propproduct = new Properties();
-
-		try {
-			propproduct.load(fis);
-			System.out.println("prop file loaded successfully");
-		} catch (IOException e) {
-			System.out.println("exception occured during load prop file " + e);
-		}
-
-	}
-
-	public static void loadPropertiyFileManufacturing(String fileName) throws Exception {
-
-		File file = new File("./src/test/resources/com/aspire/config/" + fileName + ".properties");
-		FileInputStream fis = new FileInputStream(file);
-		propmanuf = new Properties();
-
-		try {
-			propmanuf.load(fis);
-			System.out.println("prop file loaded successfully");
-		} catch (IOException e) {
-			System.out.println("exception occured during load prop file " + e);
-		}
-
-	}
-
+	
 	// For Create Driver
 	public static void createDriver(String browserName) {
 
 		try {
-			String getOsName = propconfig.getProperty("OSName");
+			String getOsName = prop.getProperty("OSName");
 
-			if (getOsName.toLowerCase().contains(propconfig.getProperty("OSName").toLowerCase())) {
+			if (getOsName.toLowerCase().contains(prop.getProperty("OSName").toLowerCase())) {
 
 				if (browserName.toLowerCase().contains("chrome".toLowerCase())) {
 
@@ -228,7 +195,7 @@ public class WebPlatformHandler {
 		return eleGetText;
 	}
 
-	// For Enter text
+	// For Enter text(Merger of all 3 above methods
 	protected boolean enterTextInTextboxAfterClearingExistingText(By locator, String getText, String elementName,
 			long waitTimeInSecond) {
 		boolean isEnteredSearchText = false;

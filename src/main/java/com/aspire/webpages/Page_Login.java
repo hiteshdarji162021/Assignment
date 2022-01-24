@@ -1,7 +1,5 @@
 package com.aspire.webpages;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -16,34 +14,33 @@ public class Page_Login extends WebPlatformHandler {
 	private By btnLogin = By.cssSelector("button.btn ");
 	private By lnkInventory = By.xpath("//*[text()='Inventory']");
 
-	//Enter userName
+	// Enter userName
 	public void setEmail() {
 
-		enterTextInTextboxAfterClearingExistingText(txtEmail, propconfig.getProperty("Account"), "Email iD", 10);
+		enterTextInTextboxAfterClearingExistingText(txtEmail, prop.getProperty("Account"), "Email iD", 10);
 		System.out.println("Email id entered successfully");
 
 	}
 
-	//Enter Password
+	// Enter Password
 	public void setPassword() {
 
-		enterTextInTextboxAfterClearingExistingText(txtPassword, propconfig.getProperty("Password"), "Email iD", 10);
+		enterTextInTextboxAfterClearingExistingText(txtPassword, prop.getProperty("Password"), "Email iD", 10);
 		System.out.println("Password entered successfully");
 
 	}
 
-	//Click on Login button
+	// Click on Login button
 	public void clickLogin() {
 
 		clickOnElementIfClickable(btnLogin, "Login button", 10);
 	}
-	
-	//Wait for Assertion of Inventory link.
+
+	// Wait for Assertion of Inventory link.
 	public boolean waitForDashboard() {
 
-			return waitmethod(lnkInventory, "Inventroylink",10);
-			
-		
+		return waitmethod(lnkInventory, "Inventroylink", 10);
+
 	}
 
 }

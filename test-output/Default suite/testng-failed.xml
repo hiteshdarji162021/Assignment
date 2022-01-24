@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.aspire.testcases.TC04_Logout">
+      <class name="com.aspire.testcases.TC01_Login">
         <methods>
-          <include name="ProductCreate"/>
+          <include name="setUp"/>
+          <include name="aspireLogin"/>
         </methods>
-      </class> <!-- com.aspire.testcases.TC04_Logout -->
+      </class> <!-- com.aspire.testcases.TC01_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

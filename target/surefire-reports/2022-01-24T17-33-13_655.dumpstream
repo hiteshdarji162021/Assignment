@@ -1,4 +1,4 @@
-# Created at 2022-01-24T10:06:34.963
+# Created at 2022-01-24T17:33:14.000
 Boot Manifest-JAR contains absolute paths in classpath 'D:\AutomationProjects\aspireqachallenge\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 

@@ -22,11 +22,9 @@ public class TC01_Login extends Page_Login {
 			extent = new ExtentReports();
 			spark = new ExtentSparkReporter("./Report/AspireReport.html");
 			extent.attachReporter(spark);
-			WebPlatformHandler.loadPropertiyFileconfig("config");
-			WebPlatformHandler.createDriver(propconfig.getProperty("Browser"));
-			WebPlatformHandler.openURL(propconfig.getProperty("URL"));
-			WebPlatformHandler.loadPropertiyFileproductDetail("ProductDetails");
-			WebPlatformHandler.loadPropertiyFileManufacturing("Manufacturingdetail");
+			loadPropertiyFile("config");
+			WebPlatformHandler.createDriver(prop.getProperty("Browser"));
+			WebPlatformHandler.openURL(prop.getProperty("URL"));
 
 		} catch (Exception e) {
 
@@ -35,6 +33,7 @@ public class TC01_Login extends Page_Login {
 
 	}
 
+	//Login
 	@Test(priority = 0, groups = { "Pre-Condtion" })
 	public void aspireLogin() {
 
@@ -43,15 +42,15 @@ public class TC01_Login extends Page_Login {
 
 			setEmail();
 			setPassword();
-			clickLogin();			
+			clickLogin();
 			assertTrue(waitForDashboard());
 			screenshot();
 			System.out.println("Login successfully");
-			test.pass("Login Successfully", MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build()); 
+			test.pass("Login Successfully", MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build());
 		} catch (Exception e) {
 			screenshot();
 			System.out.println("Login TestCase Failed");
-			test.fail("Unable to login",MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build()); 
+			test.fail("Unable to login", MediaEntityBuilder.createScreenCaptureFromPath(screenshot()).build());
 			assertTrue(false);
 
 		}

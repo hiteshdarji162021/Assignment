@@ -7,7 +7,7 @@ import com.aspire.base.WebPlatformHandler;
 
 public class Page_Manufacturing extends WebPlatformHandler {
 
-	Page_InventoryProduct objInvt;
+	Page_InventoryProduct objInventory;
 
 	private By navDashboard = By.xpath("//a[@title='Applications']");
 	private By lnkManuf = By.xpath("//div[text()='Manufacturing']");
@@ -23,28 +23,24 @@ public class Page_Manufacturing extends WebPlatformHandler {
 	private By btnDone = By.xpath("//*[text()='Mark as Done']");
 	private By btnApply = By.xpath("//*[text()='Apply']");
 
-	
-
+	//manufacturing order created
 	public void Manufactur() throws Exception {
-
-		// *[text()='Test_ProductName2022-01-23-17-17-02']
-
-		objInvt = new Page_InventoryProduct();
-		By DropProdName = By.xpath("//li/a[text()='" + objInvt.prodName + "']");
-		By DropProdName1 = By.xpath("(//li/a[text()='" + objInvt.prodName + "'])[2]");
+		objInventory = new Page_InventoryProduct();
+		By DropProdName = By.xpath("//li/a[text()='" + objInventory.prodName + "']");
+		By DropProdName1 = By.xpath("(//li/a[text()='" + objInventory.prodName + "'])[2]");
 
 		clickOnElementIfClickable(navDashboard, "navigate Dashboard", 5);
 		clickOnElementIfClickable(lnkManuf, "navigate Dashboard", 5);
 		clickOnElementIfClickable(btnCreat, "navigate Dashboard", 5);
-		enterTextInTextboxAfterClearingExistingText(txtProdName, objInvt.prodName, "Product Name", 10);
+		enterTextInTextboxAfterClearingExistingText(txtProdName, objInventory.prodName, "Product Name", 10);
 		clickOnElementIfClickable(DropProdName, "Selected Product", 5);
-		enterTextInTextboxAfterClearingExistingText(txtQty, propmanuf.getProperty("ProdQty"), "Product Qty", 10);
+		enterTextInTextboxAfterClearingExistingText(txtQty, prop.getProperty("ProdQty"), "Product Qty", 10);
 		clickOnElementIfClickable(lnkline, "Add product in line", 5);
-		enterTextInTextboxAfterClearingExistingText(txtProduct, objInvt.prodName, "Product in line", 10);
+		enterTextInTextboxAfterClearingExistingText(txtProduct, objInventory.prodName, "Product in line", 10);
 		clickOnElementIfClickable(DropProdName1, "Selected Product", 5);
 
 		clickOnElementIfClickable(btnCreate, "Create button", 5);
-		enterTextInTextboxAfterClearingExistingText(txtToConsue, propmanuf.getProperty("Consume"), "Consume", 10);
+		enterTextInTextboxAfterClearingExistingText(txtToConsue, prop.getProperty("Consume"), "Consume", 10);
 		clickOnElementIfClickable(btnSave, "Save button", 5);
 		Thread.sleep(2000);
 		clickOnElementIfClickable(btnConfirm, "Confirm button", 5);
@@ -52,14 +48,15 @@ public class Page_Manufacturing extends WebPlatformHandler {
 		clickOnElementIfClickable(btnApply, "Apply button", 5);
 	}
 
+	//manufacturing order  Validation
 	public boolean chkstatuss() {
 		By status1 = By.xpath("//button[contains(text(),'Done') and  @title='Current state']");
 		waitmethod(status1, "checkstatus1", 10);
 		By status2 = By.xpath("//span[@name='qty_producing']");
 		waitmethod(status2, "checkstatus2", 10);
 		String actualStatus = driver.findElement(By.xpath("//*[@title='Current state']")).getText();
-		String expectedStatus = propmanuf.getProperty("status");
-		String expectedQty = propmanuf.getProperty("ProdQty");
+		String expectedStatus = prop.getProperty("status");
+		String expectedQty = prop.getProperty("ProdQty");
 		String actualQty = driver.findElement(By.xpath("//span[@name='qty_producing']")).getText();
 		if (actualStatus.contains(expectedStatus) && (actualQty.contains(expectedQty))) {
 			return true;
